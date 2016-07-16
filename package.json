@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "connect": "gulp connect",
+    "clean": "gulp clean && echo \"Suppression du cache effectuée\"",
+    "build": "gulp build && echo \"La tâche de construction est finie\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.7.12",
+    "bower": "^1.3.9",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
